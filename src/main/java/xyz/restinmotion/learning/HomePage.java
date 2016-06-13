@@ -12,11 +12,17 @@ public class HomePage extends WebPage {
 	public HomePage(final PageParameters parameters) {
 		super(parameters);
 
+		//label with version
 		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
 
+		//labes with date
 		Date now = new Date();
 		Label dateTimeLabel = new Label("datetime", now.toString());
 		this.add(dateTimeLabel);
+
+		//link to HelloWorldPage
+		HelloWorldPageLink helloWorldPageLink = new HelloWorldPageLink("hello_world_link");
+		this.add(helloWorldPageLink);
 
     }
 }
