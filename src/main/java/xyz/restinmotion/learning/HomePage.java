@@ -1,5 +1,6 @@
 package xyz.restinmotion.learning;
 
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.WebPage;
@@ -20,8 +21,12 @@ public class HomePage extends WebPage {
 		Label dateTimeLabel = new Label("datetime", now.toString());
 		this.add(dateTimeLabel);
 
-		//link to HelloWorldPage
-		HelloWorldPageLink helloWorldPageLink = new HelloWorldPageLink("hello_world_link");
+		Link helloWorldPageLink = new Link("hello_world_link") {
+			@Override
+			public void onClick() {
+				this.setResponsePage(new HelloWorldPage());
+			}
+		};
 		this.add(helloWorldPageLink);
 
     }
