@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.WebPage;
 
 import java.util.Date;
 
-public class HomePage extends WebPage {
+public class HomePage extends BasePage {
 	private static final long serialVersionUID = 1L;
 
 	public HomePage() {
@@ -15,19 +15,5 @@ public class HomePage extends WebPage {
 
 		//label with version
 		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
-
-		//labes with date
-		Date now = new Date();
-		Label dateTimeLabel = new Label("datetime", now.toString());
-		this.add(dateTimeLabel);
-
-		Link helloWorldPageLink = new Link("hello_world_link") {
-			@Override
-			public void onClick() {
-				this.setResponsePage(new HelloWorldPage());
-			}
-		};
-		this.add(helloWorldPageLink);
-
     }
 }

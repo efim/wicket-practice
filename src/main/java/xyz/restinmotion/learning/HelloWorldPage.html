@@ -5,9 +5,13 @@
 		<title>Apache Wicket Quickstart</title>
 		<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+		<nav wicket:id="main_navigation">navigatoin links</nav>
 	</head>
 	<body>
 		<wicket:container wicket:id="message">1.5-SNAPSHOT</wicket:container>
-		<a href="#" wicket:id="home_page_link">Back to home</a>
+
+		<footer>
+			<span wicket:id="datetime">hh:mm DD:MM:YYYY</span>
+		</footer>
 	</body>
 </html>
