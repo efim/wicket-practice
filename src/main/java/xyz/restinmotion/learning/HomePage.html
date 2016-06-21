@@ -8,6 +8,18 @@
 		<nav wicket:id="main_navigation">navigatoin links</nav>
 	</head>
 	<body>
+
+		<h1>Wicket TextBox Example - UserPage.html</h1>
+
+		<div wicket:id="feedback"></div>
+		<form wicket:id="userForm">
+			<p>
+				<label>Username</label>:
+				<input wicket:id="username" type="text" size="20" />
+			</p>
+			<input type="submit" value="Register" />
+		</form>
+
 		<p>
 			Please mention the correct Wicket version: <wicket:container wicket:id="version">1.5-SNAPSHOT</wicket:container>.
 		</p>
