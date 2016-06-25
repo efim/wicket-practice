@@ -1,10 +1,7 @@
 package xyz.restinmotion.learning;
 
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.CheckBox;
-import org.apache.wicket.markup.html.form.CheckBoxMultipleChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.RadioChoice;
+import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
@@ -20,6 +17,7 @@ import java.util.stream.Stream;
 public class HelloWorldPage extends BasePage {
 	private boolean valueCheckbox2 = true;
 	private String rbModel = "";
+	private String language = "";
 
 	public HelloWorldPage(final PageParameters pageParameters) {
 		super();
@@ -49,6 +47,11 @@ public class HelloWorldPage extends BasePage {
 		final List<String> rbVALUES = Arrays.asList(new String[] {"val1", "val2", "val3"});
 		final RadioChoice<String> rbCompTest = new RadioChoice<>("radio_test",
 				new PropertyModel<String>(this, "rbModel"), rbVALUES);
+		rbCompTest.setRequired(Boolean.TRUE);
+
+		final List<String> LANGUAGES = Arrays.asList(new String[] {"Russian", "Esperanto", "English", "German", "Spanish"});
+		final DropDownChoice<String> ddCompLanguage = new DropDownChoice<>("dd_language",
+				new PropertyModel<String>(this, "language"), LANGUAGES);
 
 		Form<Void> checkboxTestForm = new Form<Void>("checkbox_test") {
 			@Override
@@ -59,13 +62,15 @@ public class HelloWorldPage extends BasePage {
 				this.info("resulting number is : " + cbValues.stream().mapToInt(i -> i.intValue()).sum());
 				this.info("radio buttons intended var result : " + rbModel.toString());
 				this.info("radio buttons model object : " + rbCompTest.getModelObject().toString());
+				this.info("drow down menu choise : " + language);
 			}
 		};
 		checkboxTestForm
 				.add(checkBox1)
 				.add(checkBox2)
 				.add(cbPowers)
-				.add(rbCompTest);
+				.add(rbCompTest)
+				.add(ddCompLanguage);
 
 		this.add(checkboxTestForm);
     }
