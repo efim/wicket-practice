@@ -8,6 +8,28 @@
 		<nav wicket:id="main_navigation">navigatoin links</nav>
 	</head>
 	<body>
+		<div wicket:id="feedback"></div>
+		<form wicket:id="checkbox_test">
+			<fieldset>
+				<legend>Check boxes to test:</legend>
+				<label>Check box 1:</label>
+				<input type="checkbox" wicket:id="checkbox1" />
+				<br />
+				<label>Chekc box2:</label>
+				<input type="checkbox" wicket:id="checkbox2" />
+				<br />
+
+			</fieldset>
+			<fieldset>
+				<legend>Construct binary number:</legend>
+				<span wicket:id="powers">[][][][][][][][]</span>
+			</fieldset>
+			<fieldset>
+				<legend>Radio choice testing:</legend>
+				<span wicket:id="radio_test"></span>
+			</fieldset>
+			<input type="submit" value="Submit">
+		</form>
 		<wicket:container wicket:id="message">1.5-SNAPSHOT</wicket:container>
         <span wicket:id="result">username</span>
 
