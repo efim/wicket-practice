@@ -8,12 +8,13 @@ public class HelloWorldPage extends BasePage {
 		super();
 
 		String username = "";
+		int age = pageParameters.get("age").toInt(-1);
 
 		if(!pageParameters.get("username").isEmpty()){
 			username = pageParameters.get("username").toString();
 		}
 
-		final Label result = new Label("result", "Username : " + username);
+		final Label result = new Label("result", "Username : " + username + " age : " + Integer.toString(age));
 		add(result);
 
 		add(new Label("message", "Hello World!"));
