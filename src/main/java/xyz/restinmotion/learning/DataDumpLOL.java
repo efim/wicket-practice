@@ -5,11 +5,14 @@ package xyz.restinmotion.learning;
  */
 public class DataDumpLOL {
     private String username;
+
+    private String comment;
     private int age;
 
     public DataDumpLOL() {
         age = 0;
         username = "";
+        comment = "";
     }
 
     public int getAge() {
@@ -27,4 +30,13 @@ public class DataDumpLOL {
     public void setUsername(String username) {
         this.username = username;
     }
+    
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
 }

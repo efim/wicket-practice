@@ -2,6 +2,7 @@ package xyz.restinmotion.learning;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
@@ -29,6 +30,8 @@ public class HomePage extends BasePage {
 		final TextField<Integer> tUserAge = new TextField<>("age");
 		tUserAge.setRequired(false);
 
+		final TextArea<String> tComment = new TextArea<>("comment");
+
 		Form<?> form = new Form<DataDumpLOL>("userForm",
 				new CompoundPropertyModel<DataDumpLOL>(dataDump)) {
 
@@ -39,6 +42,7 @@ public class HomePage extends BasePage {
 				PageParameters pageParameters = new PageParameters();
 				pageParameters.add("username", dataDump.getUsername());
 				pageParameters.add("age", dataDump.getAge());
+				pageParameters.add("comment", dataDump.getComment());
 				setResponsePage(HelloWorldPage.class, pageParameters);
 			}
 		};
@@ -46,6 +50,7 @@ public class HomePage extends BasePage {
 		add(form);
 		form.add(tUsername);
 		form.add(tUserAge);
+		form.add(tComment);
 
 		//label with version
 		add(new Label("version", getApplication().getFrameworkSettings().getVersion()));
