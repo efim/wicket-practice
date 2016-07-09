@@ -1,9 +1,11 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.data;
+
+import java.io.Serializable;
 
 /**
  * Created by efim on 25.06.16.
  */
-public class DataDumpLOL {
+public class DataDumpLOL implements Serializable {
     private String username;
 
     private String comment;

@@ -1,4 +1,4 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.ui.pages;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
@@ -6,11 +6,9 @@ import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.Model;
-import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import java.util.Date;
+import xyz.restinmotion.learning.ui.utils.UsernameValidator;
+import xyz.restinmotion.learning.data.DataDumpLOL;
 
 public class HomePage extends BasePage {
 	private static final long serialVersionUID = 1L;

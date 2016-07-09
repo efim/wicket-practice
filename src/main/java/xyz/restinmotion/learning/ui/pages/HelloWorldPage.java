@@ -1,4 +1,4 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.ui.pages;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.*;
@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class HelloWorldPage extends BasePage {
 	private boolean valueCheckbox2 = true;

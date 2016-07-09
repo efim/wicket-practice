@@ -1,8 +1,9 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.ui.pages;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.IModel;
+import xyz.restinmotion.learning.ui.panels.NavigationPanel;
 
 import java.util.Date;
 

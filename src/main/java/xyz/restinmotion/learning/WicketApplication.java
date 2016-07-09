@@ -2,6 +2,7 @@ package xyz.restinmotion.learning;
 
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
+import xyz.restinmotion.learning.ui.pages.HomePage;
 
 /**
  * Application object for your web application.

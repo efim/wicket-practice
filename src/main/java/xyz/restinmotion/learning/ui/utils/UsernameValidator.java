@@ -1,4 +1,4 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.ui.utils;
 
 import org.apache.wicket.validation.CompoundValidator;
 import org.apache.wicket.validation.validator.PatternValidator;

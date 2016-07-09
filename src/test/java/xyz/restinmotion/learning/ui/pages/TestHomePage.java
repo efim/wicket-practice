@@ -1,8 +1,9 @@
-package xyz.restinmotion.learning;
+package xyz.restinmotion.learning.ui.pages;
 
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
+import xyz.restinmotion.learning.WicketApplication;
 
 /**
  * Simple test using the WicketTester
